@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlueBook, toko buku online dengan koleksi buku pilihan untuk menemani setiap perjalananmu.">
+    <title>BlueBook — Temukan Buku Favoritmu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Promo bar -->
+    <div class="promo-bar">
+        <p>Temukan cerita baru, mulai dari sini.</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="beranda">
+        <div class="container nav-container">
+            <a href="#beranda" class="logo" aria-label="BlueBook beranda">
+                <span class="logo-icon">B</span>
+                <span>blue<span class="logo-light">book</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Buka navigasi" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+                <a href="#koleksi" class="nav-link">Koleksi Buku</a>
+                <a href="#tentang" class="nav-link">Tentang Kami</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+            </nav>
+
+            <button class="cart-button" id="openCart" aria-label="Buka keranjang">
+                <span class="cart-symbol">♧</span>
+                <span class="cart-text">Keranjang</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        RUANG KECIL UNTUK CERITA BESAR
+                    </span>
+
+                    <h1>Setiap buku punya cerita.<br>
+                        <span>Temukan ceritamu.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Jelajahi koleksi buku pilihan yang siap menemani
+                        waktu santai, menambah wawasan, dan menghidupkan imajinasi.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#koleksi" class="btn btn-primary">
+                            Jelajahi Koleksi <span>↗</span>
+                        </a>
+                        <a href="#tentang" class="btn btn-secondary">
+                            Tentang BlueBook
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="avatar-stack" aria-hidden="true">
+                            <span>📚</span>
+                            <span>✦</span>
+                            <span>♡</span>
+                        </div>
+                        <div>
+                            <strong>Teman untuk setiap pembaca</strong>
+                            <p>Buku pilihan, inspirasi tanpa batas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-glow"></div>
+                    <div class="hero-note note-top">
+                        <span class="note-icon">✦</span>
+                        <div>
+                            <strong>Read. Grow. Repeat.</strong>
+                            <small>Mulai perjalananmu</small>
+                        </div>
+                    </div>
+
+                    <img
+                        class="hero-image"
+                        src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=85"
+                        alt="Rak buku di perpustakaan yang nyaman"
+                    >
+
+                    <div class="hero-note note-bottom">
+                        <span class="note-book">📖</span>
+                        <div>
+                            <strong>Cerita baru menantimu</strong>
+                            <small>Temukan buku favoritmu</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-star star-one">✦</div>
+                    <div class="floating-star star-two">✧</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefit -->
+        <section class="benefits">
+            <div class="container benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-icon">♡</span>
+                    <div>
+                        <strong>Pilihan Berkualitas</strong>
+                        <p>Koleksi buku pilihan</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-icon">✧</span>
+                    <div>
+                        <strong>Harga Bersahabat</strong>
+                        <p>Belanja sesuai budget</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-icon">⌕</span>
+                    <div>
+                        <strong>Mudah Dijelajahi</strong>
+                        <p>Temukan bacaan favorit</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-icon">▤</span>
+                    <div>
+                        <strong>Untuk Semua</strong>
+                        <p>Dari fiksi hingga edukasi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection -->
+        <section class="collection section" id="koleksi">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">KOLEKSI PILIHAN</span>
+                        <h2>Buku untuk setiap <span>suasana.</span></h2>
+                        <p>Dari cerita yang menghangatkan hati sampai pengetahuan baru.</p>
+                    </div>
+
+                    <span class="collection-label">Pilihan BlueBook ✦</span>
+                </div>
+
+                <div class="catalog-toolbar">
+                    <div class="search-box">
+                        <span aria-hidden="true">⌕</span>
+                        <input type="search" id="searchInput"
+                               placeholder="Cari judul atau penulis..."
+                               aria-label="Cari buku">
+                        <button id="clearSearch" class="clear-search"
+                                aria-label="Hapus pencarian" hidden>×</button>
+                    </div>
+
+                    <div class="category-filters" id="categoryFilters">
+                        <button class="filter-btn active" data-category="Semua">Semua</button>
+                        <button class="filter-btn" data-category="Fiksi">Fiksi</button>
+                        <button class="filter-btn" data-category="Pengembangan Diri">Pengembangan Diri</button>
+                        <button class="filter-btn" data-category="Pendidikan">Pendidikan</button>
+                    </div>
+                </div>
+
+                <div class="results-info">
+                    <p id="resultsCount">Menampilkan semua buku</p>
+                    <span>Harga dalam Rupiah (Rp)</span>
+                </div>
+
+                <div class="book-grid" id="bookGrid">
+                    <!-- Kartu buku dibuat oleh JavaScript -->
+                </div>
+
+                <div class="empty-state" id="emptyState" hidden>
+                    <span>⌕</span>
+                    <h3>Buku tidak ditemukan</h3>
+                    <p>Coba kata kunci lain atau pilih kategori berbeda.</p>
+                    <button class="btn btn-primary" id="resetFilters">Lihat Semua Buku</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote banner -->
+        <section class="quote-section">
+            <div class="container quote-card">
+                <div class="quote-decoration">“</div>
+                <div class="quote-content">
+                    <span class="eyebrow">SEDIKIT INSPIRASI</span>
+                    <h2>Di antara halaman buku,<br>selalu ada dunia yang menunggu.</h2>
+                    <p>Luangkan waktu untuk membaca. Beri ruang bagi pikiranmu untuk bertumbuh.</p>
+                </div>
+                <div class="quote-illustration" aria-hidden="true">
+                    <div class="book-shape book-shape-one"></div>
+                    <div class="book-shape book-shape-two"></div>
+                    <div class="book-shape book-shape-three"></div>
+                    <span>✦</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section section" id="tentang">
+            <div class="container about-grid">
+                <div class="about-visual">
+                    <img
+                        src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=85"
+                        alt="Buku dan catatan untuk kegiatan membaca"
+                        loading="lazy"
+                    >
+                    <div class="about-badge">
+                        <span>♡</span>
+                        <div>
+                            <strong>Read with joy</strong>
+                            <small>Baca dengan bahagia</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="eyebrow">CERITA TENTANG KAMI</span>
+                    <h2>Lebih dari sekadar <span>toko buku.</span></h2>
+                    <p>
+                        BlueBook hadir sebagai ruang bagi siapa saja yang ingin
+                        menemukan bacaan yang tepat. Kami percaya bahwa sebuah buku
+                        dapat membuka perspektif, menumbuhkan ide, dan menemani
+                        perjalanan seseorang.
+                    </p>
+                    <p>
+                        Mulai dari novel favorit hingga buku pengembangan diri,
+                        jelajahi koleksi kami dan temukan cerita yang paling dekat
+                        denganmu.
+                    </p>
+
+                    <div class="about-stats">
+                        <div>
+                            <strong>8+</strong>
+                            <span>Pilihan buku</span>
+                        </div>
+                        <div>
+                            <strong>4</strong>
+                            <span>Kategori bacaan</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Semangat membaca</span>
+                        </div>
+                    </div>
+
+                    <a href="#koleksi" class="text-link">
+                        Temukan bacaanmu <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section" id="kontak">
+            <div class="container newsletter-card">
+                <div class="newsletter-copy">
+                    <span class="eyebrow">TETAP TERHUBUNG</span>
+                    <h2>Surat kecil untuk <span>pecinta buku.</span></h2>
+                    <p>Masukkan email untuk mencoba fitur berlangganan demo BlueBook.</p>
+                </div>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <label for="newsletterEmail">Alamat email</label>
+                    <div class="newsletter-input-row">
+                        <input type="email" id="newsletterEmail"
+                               placeholder="nama@email.com" required>
+                        <button type="submit" class="btn btn-primary">Daftar <span>→</span></button>
+                    </div>
+                    <small id="newsletterMessage">Ini merupakan demo. Email tidak dikirim ke server.</small>
+                </form>
+            </div>
+        </section>
+        <!-- HALAMAN CHECKOUT -->
+<section class="checkout-page section" id="checkoutPage" hidden>
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">BLUEBOOK CHECKOUT</span>
+                <h2>Selesaikan <span>Pesananmu.</span></h2>
+                <p>Lengkapi data pengiriman dan pilih metode pembayaran.</p>
+            </div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-grid">
+            <div class="checkout-form-card">
+                <h3>Informasi Pembeli</h3>
+
+                <label for="buyerName">Nama Lengkap</label>
+                <input type="text" id="buyerName" required
+                       placeholder="Masukkan nama lengkap">
+
+                <label for="buyerPhone">Nomor Telepon</label>
+                <input type="tel" id="buyerPhone" required
+                       pattern="[0-9+ -]{9,20}"
+                       placeholder="Contoh: 081234567890">
+
+                <label for="buyerAddress">Alamat Pengiriman</label>
+                <textarea id="buyerAddress" rows="3" required
+                          placeholder="Masukkan alamat lengkap"></textarea>
+
+                <h3>Metode Pembayaran</h3>
+
+                <label class="payment-option">
+                    <input type="radio" name="paymentMethod"
+                           value="QRIS" required>
+                    <span><strong>QRIS</strong>
+                    <small>Simulasi pembayaran QRIS</small></span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="paymentMethod"
+                           value="Transfer Bank">
+                    <span><strong>Transfer Bank</strong>
+                    <small>Simulasi transfer bank</small></span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="paymentMethod"
+                           value="E-Wallet">
+                    <span><strong>E-Wallet</strong>
+                    <small>Simulasi dompet digital</small></span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="paymentMethod"
+                           value="COD">
+                    <span><strong>COD</strong>
+                    <small>Simulasi bayar di tempat</small></span>
+                </label>
+
+                <p class="demo-note">
+                    Semua metode pembayaran hanya simulasi dan tidak
+                    memproses transaksi sungguhan.
+                </p>
+
+                <div class="checkout-actions">
+                    <button type="button" class="btn btn-secondary"
+                            id="backToStore">
+                        Kembali
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Konfirmasi Pesanan →
+                    </button>
+                </div>
+            </div>
+
+            <div class="order-summary-card">
+                <h3>Ringkasan Pesanan</h3>
+                <div id="checkoutItems"></div>
+
+                <div class="summary-row">
+                    <span>Jumlah buku</span>
+                    <strong id="checkoutQuantity">0 item</strong>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Total pembayaran</span>
+                    <strong id="checkoutTotal">Rp0</strong>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- HALAMAN STRUK -->
+<section class="receipt-page section" id="receiptPage" hidden>
+    <div class="container">
+        <div class="receipt-paper">
+            <div class="receipt-brand">
+                <span class="logo-icon">B</span>
+                <h2>BlueBook</h2>
+                <p>Toko Buku Online</p>
+            </div>
+
+            <div class="receipt-status">
+                PESANAN BERHASIL DIBUAT
+            </div>
+
+            <p class="receipt-demo-warning">
+                STRUK DEMO — BUKAN BUKTI PEMBAYARAN SAH
+            </p>
+
+            <div class="receipt-details">
+                <div>
+                    <span>Nomor Pesanan</span>
+                    <strong id="receiptOrderNumber"></strong>
+                </div>
+                <div>
+                    <span>Tanggal</span>
+                    <strong id="receiptDate"></strong>
+                </div>
+                <div>
+                    <span>Nama Pembeli</span>
+                    <strong id="receiptName"></strong>
+                </div>
+                <div>
+                    <span>Nomor Telepon</span>
+                    <strong id="receiptPhone"></strong>
+                </div>
+                <div>
+                    <span>Alamat</span>
+                    <strong id="receiptAddress"></strong>
+                </div>
+                <div>
+                    <span>Metode Pembayaran</span>
+                    <strong id="receiptPaymentMethod"></strong>
+                </div>
+            </div>
+
+            <h3>Detail Buku</h3>
+            <div id="receiptItems"></div>
+
+            <div class="receipt-total">
+                <span>Total Pesanan</span>
+                <strong id="receiptTotal">Rp0</strong>
+            </div>
+
+            <p class="receipt-thanks">
+                Terima kasih telah berbelanja di BlueBook.
+                Selamat membaca!
+            </p>
+
+            <div class="receipt-actions">
+                <button type="button" class="btn btn-primary"
+                        id="printReceipt">
+                    Cetak / Simpan PDF
+                </button>
+                <button type="button" class="btn btn-secondary"
+                        id="finishOrder">
+                    Kembali ke Toko
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <a href="#beranda" class="logo">
+                    <span class="logo-icon">B</span>
+                    <span>blue<span class="logo-light">book</span></span>
+                </a>
+                <p>Temukan buku favoritmu, buka dunia yang baru.</p>
+            </div>
+
+            <div class="footer-links">
+                <strong>Jelajahi</strong>
+                <a href="#beranda">Beranda</a>
+                <a href="#koleksi">Koleksi Buku</a>
+                <a href="#tentang">Tentang Kami</a>
+            </div>
+
+            <div class="footer-links">
+                <strong>Informasi</strong>
+                <a href="#kontak">Kontak</a>
+                <a href="#koleksi">Katalog</a>
+                <a href="#beranda">Kembali ke Atas ↑</a>
+            </div>
+
+            <div class="footer-social">
+                <strong>Temukan inspirasi</strong>
+                <p>Mulai dari satu halaman.</p>
+                <a href="#koleksi" class="social-link">Baca sesuatu yang baru ↗</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="currentYear"></span> BlueBook. Website praktikum GitHub Pages.</p>
+            <p>Dibuat dengan semangat membaca ♡</p>
+        </div>
+    </footer>
+
+    <!-- Overlay dan keranjang -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer"
+           aria-label="Keranjang belanja" aria-hidden="true">
+        <div class="drawer-header">
+            <div>
+                <span class="eyebrow">PILIHANMU</span>
+                <h2>Keranjang Buku</h2>
+            </div>
+            <button class="close-drawer" id="closeCart" aria-label="Tutup keranjang">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <!-- Item keranjang dibuat oleh JavaScript -->
+        </div>
+
+        <div class="cart-empty" id="cartEmpty">
+            <span>♡</span>
+            <h3>Keranjang masih kosong</h3>
+            <p>Yuk, temukan buku yang ingin kamu baca.</p>
+            <button class="btn btn-primary" id="continueShopping">Jelajahi Buku</button>
+        </div>
+
+        <div class="cart-summary" id="cartSummary">
+            <div class="summary-row">
+                <span>Jumlah buku</span>
+                <strong id="summaryQuantity">0 item</strong>
+            </div>
+            <div class="summary-row summary-total">
+                <span>Total harga</span>
+                <strong id="summaryTotal">Rp0</strong>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutButton">
+                Lanjutkan Pesanan <span>→</span>
+            </button>
+            <p class="demo-note">Demo toko: tidak ada pembayaran sungguhan.</p>
+        </div>
+    </aside>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
